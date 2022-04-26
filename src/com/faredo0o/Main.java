@@ -31,6 +31,13 @@ public class Main {
         System.out.println(hasWhiteSpaces.replaceAll("\\W","X"));// the opposite replace anything but a-zA-z0-9 and _
         System.out.println(hasWhiteSpaces.replaceAll("\\b","X")); // ech word separated by white space and surrounded by the replacement character
 
+        //Quantifiers
+        System.out.println(alphanumeric.replaceAll("^abcDe{3}","YYY")); // matches the e 3 times
+        System.out.println(alphanumeric.replaceAll("^abcDe{2,5}","YYY")); // matches the e between 2 and 5 times
+        System.out.println(alphanumeric.replaceAll("^abcDe+","YYY")); // matches 1 or more e
+        System.out.println(alphanumeric.replaceAll("^abcDe*","YYY")); // matches 0 or more e
+        System.out.println(alphanumeric.replaceAll("h+i*j","Y")); // matches h followed by 1 or more i followed by 0 or more j
+
 
     }
 }
